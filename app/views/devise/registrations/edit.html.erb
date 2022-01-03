@@ -1,7 +1,7 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2 class="pb-4"><%= t('.title', resource: resource.model_name.human) %></h2>
+<h1><%= t('.title', resource: resource_name.to_s.humanize) %></h1>
 
+<div class="row">
+  <div class="col-9">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -14,9 +14,20 @@
 	<div><%= t('.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email) %></div>
       <% end %>
 
-      <div class="mb-3">
-	<%= f.label :current_password, class: 'form-label' %>
-	<%= f.password_field :current_password, autocomplete: 'current-password', class: 'form-control' %>
+  <div class="row mb-4 mt-4">
+          <div class="form-group col">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name, autofocus: true, autocomplete: 'first name', class: 'form-control' %>
+          </div>
+          <div class="form-group col">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name, autofocus: true, autocomplete: 'last name', class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="mb-3">
+  	<%= f.label :current_password, class: 'form-label' %>
+  	<%= f.password_field :current_password, autocomplete: 'current-password', class: 'form-control' %>
 
 	<div class="form-text"><%= t('.we_need_your_current_password_to_confirm_your_changes') %></div>
       </div>
@@ -44,7 +55,8 @@
     <% end %>
 
     <p>
-      <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %>.
+      <%= t('.unhappy') %>? <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %>.
     </p>
-  </div>
+<%= link_to t('.back'), :back %>
+</div>
 </div>

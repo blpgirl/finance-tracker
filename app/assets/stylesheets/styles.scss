@@ -1,1 +1,43 @@
 @import 'bootstrap/dist/css/bootstrap';
+
+nav .container form button{position: relative;top: -3px;}
+nav .container form input.form-control{display:inline !important; width: auto;}
+
+.navbar-dark .navbar-nav li.active .nav-link{color:white;}
+.badge{color: #f82b2b;}
+.user-name{color: #4fcd00;margin-left: 15px;  margin-right: 5px;margin-top: 7px !important;}
+#friend-results table td{padding: 0 5px;}
+
+.search-area {
+    padding-top: 50px;
+}
+
+.no-right-padding {
+    padding-right: 0 !important;
+}
+
+.no-left-padding {
+    padding-left: 0 !important;
+}
+
+.results-block {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.logout-button {
+    margin-right: 5px;
+}
+
+.user-name {
+    margin-top: 3.5%;
+    padding-right: 5px;
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-collapse {justify-content: flex-end;}
+}
+
+@media (max-width: 992px){
+  .user-name{margin-left: 0px;  margin-right: 0px;}
+}

@@ -25,6 +25,8 @@ gem "devise-bootstrap5"
 # https://github.com/dblock/iex-ruby-client for stocks api
 # enpoint en sandbox  endpoint: 'https://sandbox.iexapis.com/v1'
 gem 'iex-ruby-client'
+# https://github.com/bokmann/font-awesome-rails
+gem "font-awesome-rails"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
